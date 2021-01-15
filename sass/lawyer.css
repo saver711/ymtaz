@@ -1,0 +1,207 @@
+.navbar__navs li {
+  font-family: "bukra-bold";
+}
+
+.lawyer {
+  margin: 25px 0;
+}
+
+.lawyer h4 {
+  color: #cd5334;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.lawyer__card {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.lawyer__card .row,
+.lawyer__card .col-12 {
+  height: 100%;
+}
+
+.lawyer .main,
+.lawyer .contact {
+  padding: 15px;
+  height: 100%;
+}
+
+.lawyer .main {
+  border-left: 2px solid #ddd;
+}
+
+.lawyer .main .lawyer__categs-head {
+  margin-top: 15px;
+}
+
+.lawyer__img {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #cd5334;
+}
+
+.lawyer__name, .lawyer__miniAbout {
+  text-align: center;
+}
+
+.lawyer__miniAbout {
+  margin: 5px auto 20px;
+  font-size: 1.2rem;
+}
+
+.lawyer__about {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.lawyer__country, .lawyer__nationality {
+  font-size: 1.2rem;
+  font-family: "bukra-bold";
+}
+
+.lawyer__country {
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
+.lawyer__consult {
+  height: 30px;
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+  display: none;
+}
+
+.lawyer .extra {
+  padding: 15px 0;
+}
+
+.lawyer__categs {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lawyer__categ {
+  margin: 0 0 10px 10px;
+  padding: 7px 15px;
+  background-color: #cd5334;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.lawyer__location {
+  padding-left: 15px;
+}
+
+.lawyer__location iframe {
+  width: 100%;
+}
+
+.contact .cmnForm {
+  width: 100%;
+  margin: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.contact .cmnForm input:not([type="submit"]),
+.contact .cmnForm textarea {
+  padding: 4px;
+}
+
+.contact .cmnForm label {
+  margin: 10px 0 5px;
+}
+
+.contact .cmnForm .cmnForm__file {
+  margin: 15px auto 10px;
+  padding: 15px 10px;
+}
+
+.contact__icons a {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.contact__icons a:not(:last-of-type) {
+  margin-left: 15px;
+}
+
+.contact__icons a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contact__fb::before {
+  color: #3b5998;
+}
+
+.contact__insta::before {
+  color: #e1306c;
+}
+
+.contact__snap::before {
+  color: darkgoldenrod;
+}
+
+.contact__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.contact__row span {
+  margin-left: 10px;
+  color: #cd5334;
+  font-size: 2rem;
+}
+
+.contact__phone {
+  margin-top: 10px;
+}
+
+.contact__accounts-nums-title {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact {
+    margin: 25px 0 25px 0;
+  }
+  .lawyer .extra,
+  .lawyer .contact {
+    height: auto;
+  }
+  .lawyer__consult {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 575.5px) {
+  .lawyer .main {
+    border-bottom: 2px solid;
+  }
+  .lawyer .extra {
+    padding: 15px 15px 15px 0;
+  }
+  .lawyer__card {
+    height: auto;
+  }
+}
+/*# sourceMappingURL=lawyer.css.map */

@@ -1,0 +1,39 @@
+/* VARIABLES */
+.container > .row:hover .card-lawyer {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: .5;
+}
+
+.container > .row .card-lawyer:hover {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+@media (pointer: coarse) {
+  /* custom css for "touch targets" */
+  .container > .row:hover .card-lawyer {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (hover: none), (hover: on-demand) {
+  /* custom css for "touch targets" */
+  .container > .row:hover .card-lawyer {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=category.css.map */
