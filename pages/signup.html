@@ -13,6 +13,13 @@
     <!-- mine -->
     <link rel="stylesheet" href="../sass/common.css" />
     <link rel="stylesheet" href="../sass/log.css" />
+
+    <!-- fav icons -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images//icon-32.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/icon-16.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images//icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icon-16.png">
   </head>
   <body>
     <div class="body-content">
@@ -84,7 +91,7 @@
         </div>
         <!-- end navbar -->
         <!-- start signup -->
-        <div class="signup">
+        <div class="signup sec-padd">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-md-5">
@@ -98,33 +105,35 @@
                     </div>
     
                     <div class="col-12 col-md-7">
-                        <form action="" class="log">
+                        <form action="" class="log" name="signupform" novalidate>
+                            <div class="formErr">
+                                <p></p>
+                              </div>
                             <div class="log__row log__row--1">
                                 <div class="log__col">
-                                    <label for="name">الاسم بالكامل</label>
-                                    <input id="name" type="text" required autocomplete="name">
+                                    <label for="name">الاسم بالكامل*</label>
+                                    <input id="name"  type="text" data-required="required" name="usernm" autocomplete="name">
                                 </div>
                             </div>
                             <div class="log__row log__row--2">
                                 <div class="log__col">
-                                    <label for="email">البريد الالكتروني</label>
-                                    <input id="email" type="email" autocomplete="email" required>
+                                    <label for="email">البريد الالكتروني*</label>
+                                    <input id="email" type="email" autocomplete="email" name="useremail" data-required="required">
                                 </div>
             
                                 <div class="log__col">
-                                    <label for="pass">كلمة المرور</label>
-                                    <input id="pass" type="password" required>
+                                    <label for="pass">كلمة المرور*</label>
+                                    <input id="pass" data-required="required" name="userpass" type="password" >
                                 </div>
                             </div>
             
                             <div class="log__row log__row--2">
                                 <div class="log__col">
-                                    <label for="country-select">الدولة</label>
-                                    <select required
+                                    <label for="country-select">الدولة*</label>
+                                    <select 
                               class="list filterSelect"
                               data-target="select-family" id="country-select"
                             >
-                              <option value="0" data-reference="0">الكل</option>
               
                               <option value="1" data-reference="1">مصر</option>
               
@@ -135,10 +144,9 @@
                                 </div>
             
                                 <div class="log__col">
-                                    <label for="select-family">المدينة</label>
-                                    <select class="list" id="select-family" required>
-                                        <option value="0" data-belongsto="0">الكل</option>
-                                        <option value="1" data-belongsto="1">القاهره</option>
+                                    <label for="select-family">المدينة*</label>
+                                    <select class="list" id="select-family" >
+                                        <option value="1" data-belongsto="1">القاهرة</option>
                         
                                         <option value="2" data-belongsto="1">الاسكندرية</option>
                         
@@ -155,15 +163,15 @@
             
                             <div class="log__row log__row--2">
                                 <div class="log__col">
-                                    <label for="nationality">الجنسية</label>
-                                <select name="" id="nationality" required>
+                                    <label for="nationality">الجنسية*</label>
+                                <select name="" id="nationality" >
                                     <option value="1">مصري</option>
                                 </select>
                                 </div>
             
                                 <div class="log__col">
-                                    <label for="gender">الجنس</label>
-                                <select name="" id="gender" required>
+                                    <label for="gender">الجنس*</label>
+                                <select name="" id="gender" >
                                     <option value="1">ذكر</option>
                                     <option value="2">أنثي</option>
                                 </select>
@@ -172,45 +180,45 @@
             
                             <div class="log__row log__row--1">
                                 <div class="log__col">
-                                    <label>المهنة</label>
+                                    <label class="jobLabel">المهنة*</label>
                                     <div class="log__field">
                                         <div class="log__box">
-                                            <input type="checkbox" id="licenced-lawyer">
+                                            <input type="checkbox" name="userjob" id="licenced-lawyer">
                                             <label for="licenced-lawyer">محام مرخص</label>
                                         </div>
             
                                         <div class="log__box">
-                                            <input type="checkbox" id="mohakem">
+                                            <input type="checkbox" name="userjob" id="mohakem">
                                             <label for="mohakem">محكم</label>
                                         </div>
             
                                         <div class="log__box">
-                                            <input type="checkbox" id="maaazon-ankhoh">
+                                            <input type="checkbox" name="userjob" id="maaazon-ankhoh">
                                             <label for="maaazon-ankhoh">مأذون أنكحة</label>
                                         </div>
             
                                         <div class="log__box">
-                                            <input type="checkbox" id="moatheq">
+                                            <input type="checkbox" name="userjob" id="moatheq">
                                             <label for="moatheq">موثق</label>
                                         </div>
             
                                         <div class="log__box">
-                                            <input type="checkbox" id="nazer-waaf">
+                                            <input type="checkbox" name="userjob" id="nazer-waaf">
                                             <label for="nazer-waaf">ناظر وقف</label>
                                         </div>
             
                                         <div class="log__box">
-                                            <input type="checkbox" id="mstshar-qanony">
+                                            <input type="checkbox" name="userjob" id="mstshar-qanony">
                                             <label for="mstshar-qanony">مستشار قانوني</label>
                                         </div>
             
                                         <div class="log__box">
-                                            <input type="checkbox" id="mtrgm-moatamad">
+                                            <input type="checkbox" name="userjob" id="mtrgm-moatamad">
                                             <label for="mtrgm-moatamad">مترجم معتمد</label>
                                         </div>
             
                                         <div class="log__box">
-                                            <input type="checkbox" id="hares-qdaey">
+                                            <input type="checkbox" name="userjob" id="hares-qdaey">
                                             <label for="hares-qdaey">حارس قضائي</label>
                                         </div>
                                     </div>
@@ -219,54 +227,93 @@
             
                             <div class="log__row log__row--2">
                                 <div class="log__col">
-                                    <label for="degree">الدرجة العلمية</label>
-                                    <select name="" id="degree" required>
+                                    <label for="degree">الدرجة العلمية*</label>
+                                    <select name="" id="degree" >
                                         <option value="1">ماجستير</option>
                                     </select>
                                 </div>
             
                                 <div class="log__col">
-                                    <label for="phone">رقم الهاتف</label>
-                                    <input type="tel" name="" id="phone" autocomplete="tel" required>
+                                    <label for="phone">رقم الهاتف*</label>
+                                    <input type="tel" data-required="required" name="userphone" id="phone" autocomplete="tel" >
                                 </div>
                             </div>
             
                             <div class="log__row log__row--1">
                                 <div class="log__col">
-                                    <label for="miniAbout">نعريف مختصر</label>
-                                    <input required type="text" id="miniAbout" placeholder="مثال: محامي بمحكمة النقض العالي">
+                                    <label for="miniAbout">نعريف مختصر*</label>
+                                    <input  type="text" data-required="required" name="userminiabout" id="miniAbout" placeholder="مثال: محامي بمحكمة النقض العالي">
                                 </div>
                             </div>
             
                             <div class="log__row log__row--1">
                                 <div class="log__col">
-                                    <blockquote class="commitment">
-                                        <q>
-                                            اتعهد بصحة المعلومات في ملفي الشخصي وعلي استعداد لتقديم ما يثبت صحة هذه المعلومات من وثاثق او مستندات فور طلبها
-                                        </q>
-                                    </blockquote>
+                                    <div class="commitment slider-head">
+                                        
+                                            الشروط والأحكام <svg class="spt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                                <g>
+                                                    <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                </svg>
+                                        
+                                    </div>
+
+                                    <ul class="commitmentList slider-slided">
+                                        <li class="commitmentList__item">شرط هنا</li>
+                                        <li class="commitmentList__item">شرط اخر</li>
+                                    </ul>
                                     
                                     <div class="log__box">
-                                        <input type="checkbox" required id="commitment" required>
-                                    <label for="commitment">أقر وأتعهد</label>
+                                        <input type="checkbox"  id="commitment" name="usercommitment">
+                                    <label for="commitment" class="commitmentLabel">أقر وأتعهد*</label>
                                     </div>
                                 </div>
                             </div>
             
                             <div class="log__row log__row--2">
                                 <div class="log__col">
-                                    <label for="id">الهوية</label>
-                                    <input required type="number" pattern="[0-9]*" id="id">
+                                    <label for="id">الهوية*</label>
+                                    <input  type="number" data-required="required" name="useridentity" pattern="[0-9]*" id="id">
                                 </div>
             
                                 <div class="log__col">
-                                    <label for="licence">رقم الترخيص</label>
-                                    <input required type="number" pattern="[0-9]*" licence="licence">
+                                    <label for="licence">رقم الترخيص*</label>
+                                    <input data-required="required" name="userlicence" type="number" pattern="[0-9]*" licence="licence">
                                 </div>
                             </div>
             
                             <div class="log__row log__row--1">
-                                <input type="submit" value="الدفع والتسجيل">
+                                <input type="submit" id="signupformsubmit" value="الدفع والتسجيل">
                             </div>
                         </form>
                     </div>
@@ -299,6 +346,7 @@
 
     <!-- JS -->
     <script src="../js/jquery-3.5.1.min.js"></script>
+    <!-- for select combos -->
     <script src="../js/categories.js"></script>
     <script src="../js/common.js"></script>
   </body>

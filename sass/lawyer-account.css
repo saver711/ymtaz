@@ -7,6 +7,10 @@
   width: 0px !important;
 }
 
+.dForm .nHead {
+  display: none;
+}
+
 body {
   padding-top: 60px;
   color: #333333;
@@ -57,7 +61,7 @@ button:focus {
   position: absolute;
   top: 50%;
   left: 20px;
-  width: 43px;
+  width: 33px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -243,7 +247,7 @@ button:focus {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 10px;
-  font-size: 2.1rem;
+  font-size: 20px;
   color: #008658;
 }
 
@@ -388,6 +392,11 @@ button:focus {
   width: 100%;
 }
 
+.box__input[disabled] {
+  background-color: #ccc;
+  border: 1px solid #333;
+}
+
 .box__add {
   padding: 5px;
   display: -webkit-box;
@@ -455,21 +464,6 @@ button:focus {
 
 .box__label {
   margin-bottom: 3px;
-  color: #008658;
-  font-size: 1.3rem;
-}
-
-.box__subTitle {
-  color: #005a3b;
-  margin-bottom: 5px;
-}
-
-.box__forward {
-  color: #008658;
-  text-decoration: underline;
-}
-
-.box__forward-con {
   color: #008658;
   font-size: 1.3rem;
 }
@@ -640,7 +634,7 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #cd5334;
+  color: #cd3434;
 }
 
 .consult__phone span, .consult__mail span {
@@ -815,6 +809,12 @@ button:focus {
 /*RESPOSIVE*/
 /****************************/
 /*--------------	Media queries	------------------*/
+@media only screen and (max-width: 1000px) {
+  .dForm .nHead {
+    display: block;
+  }
+}
+
 /*
 	* < 568px
 */
@@ -833,9 +833,15 @@ button:focus {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .box .col-12 {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .box__submit-group-post {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=lawyer-account.css.map */

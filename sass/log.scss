@@ -1,0 +1,211 @@
+// VARIABLES
+$main-color: #ad592d;
+ 
+$text-color: #777777;
+$shining-color: #cd3434;
+
+$white-color: #fff;
+$light-color: #d8dad3;
+$lighter-color: #f1f1f1;
+
+$dark-color: #4a4a48;
+
+.log {
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 10px $main-color;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &--1 {
+      .log__col {
+        width: 100%;
+      }
+    }
+
+    &--2 {
+      justify-content: space-between;
+      .log__col {
+        width: 49%;
+      }
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    input:not([type="checkbox"]) {
+      width: 100%;
+    }
+  }
+
+  label {
+    font-family: "bukra-bold";
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+  }
+
+  input {
+    padding: 6px;
+    border: 1.2px solid#bfbfbf;
+  }
+
+  select {
+    padding: 4px 7px;
+    border: 1.2px solid#bfbfbf;
+  }
+
+  &__field {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__box {
+    display: inline-flex;
+    margin: 0 0 7px 5px;
+    padding: 5px 11px;
+    background-color: $white-color;
+    border-radius: 3px;
+    align-items: center;
+    border: 1.2px solid#bfbfbf;
+    input {
+      margin-left: 3px;
+    }
+  }
+
+  .commitment {
+    margin-bottom: 5px;
+cursor: pointer;
+      font-size: 1.3rem;
+      line-height: 1.47;
+      text-decoration: underline;
+      font-family: "bukra-bold";
+  }
+
+  .commitmentList{
+    list-style: circle;
+    padding-right: 20px;
+    margin-bottom: 7px;
+    display: none;
+    &__item{
+      font-size: 1.3rem;
+      &:not(:last-of-type){
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: $main-color;
+    font-family: "bukra-bold";
+  }
+
+  .forget-text {
+    cursor: pointer;
+    font-family: "bukra-bold";
+    font-size: 1.1rem;
+    color: $shining-color;
+  }
+
+  .forget-mail {
+    display: none;
+
+    &__msg{
+      width: 100%;
+      text-align: center;
+      color: $shining-color;
+    }
+  }
+}
+
+.signup {
+  &__show {
+    height: 100%;
+    // padding: 0 15px 0;
+    box-shadow: -3px 0 10px #ccc;
+  }
+  &__logo {
+    margin: 0 auto 0;
+    width: 43%;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+    background-color: #ad592d;
+    color: #fff;
+    padding: 5px 15px 5px 0;
+  }
+}
+
+.login {
+  .signup__show {
+    box-shadow: none;
+  }
+}
+
+
+/*login-phone*/
+.login-phone{
+  button:focus,
+input:focus{
+  outline: none;
+  box-shadow: 0 0 5px $main-color;
+}
+
+  .otp-form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+}
+.otp-inputbar{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+#errmsg
+{
+  font-family: "bukra-bold";
+  font-size: 1.4rem;
+  text-align: center;
+color: red;
+}
+}
+
+@media only screen and (max-width: 991px) {
+  .signup {
+    .log {
+      width: 90%;
+      margin-top: 37px;
+    }
+    &__show {
+      margin: 15px 0 0;
+      box-shadow: 0 3px 10px #ccc;
+    }
+    &__logo {
+      margin: 0 auto 0;
+      width: 45%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .signup {
+    &__logo {
+      width: 28%;
+    }
+  }
+}
+

@@ -13,6 +13,13 @@
     <!-- mine -->
     <link rel="stylesheet" href="../sass/common.css" />
     <link rel="stylesheet" href="../sass/lawyer-account.css" />
+
+    <!-- fav icons -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images//icon-32.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/icon-16.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images//icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icon-16.png">
   </head>
   <body>
     <!-- view menu on hover on #hit-menu -->
@@ -612,11 +619,16 @@
           </div>
           <div class="box box-1">
             <form action="" class="dForm" name="form1">
+              <div class="nHead">
+                <h2 class="nHead__title">
+                    استكمال الملف
+                </h2>
+            </div>
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <div class="box__inner">
-                      <h2 class="box__title">الحسابات البنكية</h2>
+                      <h3 class="box__title">الحسابات البنكية</h3>
                       <input
                         type="number"
                         pattern="[0-9]*"
@@ -628,18 +640,17 @@
                         pattern="[0-9]*"
                         class="box__input"
                       />
-
+ 
                       <div class="box__add">
                         <span class="flaticon-add flat-icon"></span>
                       </div>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">من نحن ( باستفاضة )</h2>
+                    <h3 class="box__title">من نحن ( باستفاضة )</h3>
                     <textarea
-                      class="box__input"
+                      class="box__input textareaeditor"
                       name=""
-                      id=""
                       cols="30"
                       rows="6"
                     ></textarea>
@@ -649,22 +660,22 @@
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <div class="box__inner">
-                      <h2 class="box__title">موقع المكتب</h2>
+                      <h3 class="box__title">موقع المكتب</h3>
                       <div class="box__crnt-location">
-                        <span class="flaticon-location flat-icon"></span>
-                        <p>الموقع الحالي</p>
+                        <span class=" flaticon-placeholder flat-icon"></span>
+                        <p>اضغط لتحديد موقعك</p>
                       </div>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="box__inner">
-                      <h2 class="box__title">اضافة الموقع يدويا</h2>
+                      <!-- <h3 class="box__title">اضافة الموقع يدويا</h3> -->
                       <label class="box__label" for="Latitude">Latitude</label>
                       <input
                         class="box__input"
                         type="number"
                         pattern="[0-9]*"
-                        id="Latitude"
+                        id="Latitude" disabled
                       />
 
                       <label class="box__label" for="Longitude"
@@ -674,16 +685,16 @@
                         class="box__input"
                         type="number"
                         pattern="[0-9]*"
-                        id="Longitude"
+                        id="Longitude" disabled
                       />
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-12 col-md-6">
                     <div class="box__inner">
-                      <h2 class="box__title">طريقة اضافة الموقع يدويا :</h2>
+                      <h3 class="box__title">طريقة اضافة الموقع يدويا :</h3>
                       <h3 class="box__subTitle">
                         ( 1 ) فتح موقع جوجل ماب من
                         <a
@@ -713,12 +724,12 @@
                       >هنا</a
                     >
                   </p>
-                </div>
+                </div> -->
 
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <div class="box__inner cmnForm cmnForm1">
-                      <h2 class="box__title">اضافة صورة</h2>
+                      <h3 class="box__title">اضافة صورة</h3>
                       <input type="file" name="file" id="file" accept="image/*"/>
                       <label for="file" class="cmnForm__file">
                         <span class="flaticon-upload-1 flat-icon"></span>
@@ -728,8 +739,16 @@
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">عدد القضايا</h2>
+                    <h3 class="box__title">عدد القضايا</h3>
                     <input type="number" pattern="[0-9]*" class="box__input" />
+
+                    <h3 class="box__title">
+                      رابط الفيديو الشخصي
+                    </h3>
+
+                    <input type="url" name="" class="box__input" placeholder="https://example.com"
+                    pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+                    >
                   </div>
                 </div>
 
@@ -1282,7 +1301,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">تعديل البريد الالكتروني</h2>
+                    <h3 class="box__title">تعديل البريد الالكتروني</h3>
                     <input
                       type="email"
                       class="box__input"
@@ -1291,24 +1310,24 @@
                   </div>
 
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">تعديل كلمة المرور</h2>
+                    <h3 class="box__title">تعديل كلمة المرور</h3>
                     <input type="password" class="box__input" />
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <div class="box__inner cmnForm cmnForm1">
-                      <h2 class="box__title">تعديل الصورة الشخصية</h2>
+                      <h3 class="box__title">تعديل الصورة الشخصية</h3>
                       <input type="file" name="file" id="file2" accept="image/*"/>
                       <label for="file2" class="cmnForm__file">
                         <span class="flaticon-upload-1 flat-icon"></span>
                         <p class="cmnForm__file--note">اضغط لرفع صورتك</p>
-                        <ul class="cmnForm__file--value" id="filesLise"></ul>
+                        <ul class="cmnForm__file--value" id="filesLise2"></ul>
                       </label>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">تعديل رقم الهاتف</h2>
+                    <h3 class="box__title">تعديل رقم الهاتف</h3>
                     <input
                       type="number"
                       pattern="[0-9]*"
@@ -1328,7 +1347,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">تعديل الدولة</h2>
+                    <h3 class="box__title">تعديل الدولة</h3>
                     <select
                       class="list filterSelect box__input"
                       data-target="select-family"
@@ -1345,7 +1364,7 @@
                   </div>
 
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">تعديل المدينة</h2>
+                    <h3 class="box__title">تعديل المدينة</h3>
                     <select class="list box__input" id="select-family">
                       <option value="0" data-belongsto="0">
                         اختر الدولة اولا
@@ -1369,7 +1388,7 @@
 
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">الجنسية</h2>
+                    <h3 class="box__title">الجنسية</h3>
                     <input type="text" class="box__input" placeholder="مصري" />
 
                     <div class="box__add settings-add">
@@ -1378,7 +1397,7 @@
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="box__inner">
-                      <h2 class="box__title">الحسابات البنكية</h2>
+                      <h3 class="box__title">الحسابات البنكية</h3>
                       <input
                         type="number"
                         pattern="[0-9]*"
@@ -1400,29 +1419,37 @@
 
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">الدرجة العلمية</h2>
+                    <h3 class="box__title">الدرجة العلمية</h3>
                     <select class="box__input" name="" id="degree">
                       <option value="1">ماجستير</option>
                     </select>
                   </div>
                   <div class="col-12 col-md-6">
-                    <h2 class="box__title">تعريف مختصر</h2>
+                    <h3 class="box__title">تعريف مختصر</h3>
                     <input
                       type="text"
                       id="miniAbout"
                       class="box__input"
                       placeholder="محامي بمحكمة النقض العالي"
                     />
+
+                    <h3 class="box__title">
+                      رابط الفيديو الشخصي
+                    </h3>
+
+                    <input type="url" name="" class="box__input" placeholder="https://example.com"
+                    pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+                    >
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-12">
-                    <h2 class="box__title">من نحن ( باستفاضة )</h2>
+                    <h3 class="box__title">من نحن ( باستفاضة )</h3>
                     <textarea
-                      class="box__input"
+                      class="box__input textareaeditor2"
                       name=""
-                      id=""
+                      
                       cols="30"
                       rows="6"
                     ></textarea>
@@ -1437,8 +1464,8 @@
                     </q>
                   </blockquote>
                   <div class="box__admit-box">
-                    <input type="checkbox" required="" id="commitment" />
-                    <label for="commitment">أقر وأتعهد</label>
+                    <input type="checkbox" required="" id="commitment2" />
+                    <label for="commitment2">أقر وأتعهد</label>
                   </div>
                 </div>
 
@@ -1465,6 +1492,43 @@
 
     <!-- JS -->
     <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <!-- html textarea editor -->
+    <script src="../js/ckeditor.js"></script>
+
+    <script>
+      ClassicEditor.create( document.querySelector( '.textareaeditor' ), {
+        language: {
+            // The UI will be English.
+            ui: 'ar',
+
+            // But the content will be edited in Arabic.
+            content: 'ar'
+        }
+    } )
+    .then( editor => {
+        window.editor = editor;
+    } )
+    .catch( err => {
+        console.error( err.stack );
+    } );
+
+    ClassicEditor.create( document.querySelector( '.textareaeditor2' ), {
+        language: {
+            // The UI will be English.
+            ui: 'ar',
+
+            // But the content will be edited in Arabic.
+            content: 'ar'
+        }
+    } )
+    .then( editor => {
+        window.editor = editor;
+    } )
+    .catch( err => {
+        console.error( err.stack );
+    } );
+    </script>
     <script src="../js/lawyer-account.js"></script>
   </body>
 </html>

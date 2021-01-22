@@ -1,0 +1,289 @@
+// VARIABLES
+$main-color: #ad592d;
+ 
+$text-color: #777777;
+$shining-color: #cd3434;
+
+$white-color: #fff;
+$light-color: #d8dad3;
+$lighter-color: #f1f1f1;
+
+$dark-color: #4a4a48;
+
+.navbar__navs {
+  li {
+    font-family: "bukra-bold";
+  }
+}
+
+.lawyerNv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1{
+    text-align: center;
+  }
+
+  p{
+    margin-top: 3px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+.lawyer {
+  margin: 25px 0;
+  h4 {
+    color: $shining-color;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-family: "bukra-bold";
+  }
+
+  &__card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+
+    .row,
+    .col-12 {
+      height: 100%;
+    }
+  }
+  .main,
+  .contact {
+    padding: 15px;
+    height: 100%;
+  }
+  .main {
+    border-left: 2px solid #ddd;
+
+    .lawyer__categs-head {
+      margin-top: 15px;
+    }
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $shining-color;
+  }
+
+  &__name,
+  &__miniAbout {
+    text-align: center;
+  }
+
+  &__miniAbout {
+    margin: 5px auto 20px;
+    font-size: 1.2rem;
+  }
+
+  &__about {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  &__country,
+  &__nationality {
+    font-size: 1.2rem;
+    font-family: "bukra-bold";
+  }
+
+  &__country {
+    margin-top: 30px;
+    margin-bottom: 6px;
+  }
+
+  &__consult {
+    height: 30px;
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    display: none;
+  }
+
+  .extra {
+    padding: 15px 0;
+  }
+
+  &__categs {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  &__categ {
+    margin: 0 0 10px 10px;
+    padding: 7px 15px;
+    background-color: $shining-color;
+    color: $white-color;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+
+  &__video {
+    padding-left: 15px;
+    margin-bottom: 6px;
+    
+    iframe {
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+
+  &__location{
+    &--inner{
+      display: flex;
+      justify-content: center;
+      a{
+        font-size: 50px;
+        color: red;
+        margin-right: -15px;
+        span::before{
+          box-shadow: 0 3px 30px #ccc;
+          padding: 20px;
+          border-radius: 50%;
+          transition: .2s;
+          display: block;
+        }
+
+        &:hover{
+          span::before{
+            transform: scale(.98);
+            box-shadow: 0 3px 5px #ccc;
+            
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+.contact {
+  .cmnForm {
+    width: 100%;
+    margin: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    padding: 0;
+  }
+  .cmnForm input:not([type="submit"]),
+  .cmnForm textarea {
+    padding: 4px;
+  }
+
+  .cmnForm label {
+    margin: 10px 0 5px;
+  }
+
+  .cmnForm .cmnForm__file {
+    margin: 15px auto 10px;
+    padding: 15px 10px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    span {
+      margin-left: 10px;
+      color: $shining-color;
+      font-size: 2rem;
+    }
+  }
+
+  
+  &__icons {
+    a {
+      display: inline-block;
+      font-size: 2rem;
+
+      &:not(:last-of-type) {
+        margin-left: 15px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__fb {
+    &::before {
+      color: #3b5998;
+    }
+  }
+
+  &__twitt{
+    &::before{
+      color: #00acee;
+    }
+  }
+
+  &__wats{
+    span{
+      color: #075e54;
+    }
+  }
+
+  &__phone{
+    span{
+      color:#53c353;
+    }
+  }
+
+
+
+  
+
+  &__phone {
+    margin-top: 10px;
+  }
+
+  &__accounts-nums-title {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .contact {
+    margin: 25px 0 25px 0;
+  }
+  .lawyer .extra,
+  .lawyer .contact {
+    height: auto;
+  }
+
+  .lawyer {
+    &__consult {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 575.5px) {
+  .lawyer {
+    .main {
+      border-bottom: 2px solid;
+    }
+
+    .extra {
+      padding: 15px 15px 15px 0;
+    }
+  }
+  .lawyer__card {
+    height: auto;
+  }
+
+  
+}
+
+@media only screen and (min-width: 576px){
+  .pad-r-576-0{
+    padding-right: 0;
+  }
+}

@@ -14,6 +14,13 @@
     <!-- mine -->
     <link rel="stylesheet" href="../sass/common.css">
     <link rel="stylesheet" href="../sass/lawyer.css">
+
+    <!-- fav icons -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images//icon-32.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/icon-16.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images//icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icon-16.png">
 </head>
 
 <body>
@@ -26,29 +33,11 @@
                 <img src="../assets/images/logo.webp" alt="yamtaz logo">
             </a>
 
-            <div id="menuToggle" class="my-d-none">
-                <!--
-                A fake / hidden checkbox is used as click reciever,
-                so you can use the :checked selector on it.
-                -->
-                <input type="checkbox" />
 
-                <!--
-                Some spans to act as a hamburger.
-                
-                They are acting like a real hamburger,
-                not that McDonalds stuff.
-                -->
-                <span></span>
-                <span></span>
-                <span></span>
-
+            <div class="lawyerNv">
+                <h1>محمد عبد الله</h1>
+                <p>محامي بمحكمة النقض العليا</p>
             </div>
-
-            <ul class="navbar__navs hide">
-                <li><a href="../index.html">موقع يمتاز للمحاماة</a></li>
-
-            </ul>
 
             <!-- دي هتظهر لو مش مسجل -->
             <!-- <div class="notRegistered">
@@ -66,7 +55,7 @@
                         <img src="../assets/images/blank.webp" alt="user image">
                     </div>
 
-                    <h3 class="registered__name">يوسف بن الشيخ</h3>
+                    <h3 class="registered__name">لوحة التحكم</h3>
                 </a>
 
                  
@@ -121,8 +110,12 @@
                                 </div>
                             </div>
     
-                            <div class="col-12 col-sm-7">
+                            <div class="col-12 col-sm-7 pad-r-576-0">
                                 <div class="extra">
+                                    <h4>من نحن.؟</h4>
+                                    <div class="lawyer__video">
+                                        <iframe height="215" src="https://www.youtube.com/embed/irsfMtJM-lU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                     <h4>تواصل معنا :</h4>
                                     <div class="contact__icons">
                                         <a href="#">
@@ -130,18 +123,24 @@
                                         </a>
             
                                         <a href="#">
-                                            <span class="flaticon-instagram flat-icon contact__insta""></span>
+                                            <span class="flaticon-twitter flat-icon contact__twitt""></span>
                                         </a>
             
-                                        <a href="#">
-                                            <span class="flaticon-snapchat flat-icon contact__snap"></span>
-                                        </a>
+
                                     </div>
             
                                     <a href="tel:+201126183678" class="contact__phone contact__row">
                                         <span class="flaticon-phone-ringing flat-icon"></span>
                                         <p>+201126183678</p>
                                     </a>
+
+                                    <a
+                      href="https://wa.me/+201126183678?text=message text"
+                      class="contact__wats contact__row"
+                    >
+                      <span class="flaticon-whatsapp flat-icon"></span>
+                      <p>+201126183678</p>
+                    </a>
             
                                     <a href="mailto:ahwork711@gmail.com" class="email contact__row">
                                         <span class="flaticon-email flat-icon"></span>
@@ -160,7 +159,14 @@
                                     </div>
 
                                     <div class="lawyer__location">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109505.90709662839!2d31.12730000000001!3d30.940900000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7bb501f6f8559%3A0xcc852f52f1fc9438!2sTalaat%20Harb%2C%20Al%20Mahalah%20Al%20Kubra%20(Part%202)%2C%20Second%20Mahalla%20Al%20Kobra%2C%20Gharbia%20Governorate!5e0!3m2!1sen!2seg!4v1610365471744!5m2!1sen!2seg" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                        <h4>اين نحن.؟</h4>
+                                        <div class="lawyer__location--inner">
+                                            <!-- 21z >> قيمة الزووم -->
+                                            <a href="https://www.google.com/maps/@31.0139729,31.1603711,21z">
+                                                <span class=" flaticon-placeholder flat-icon"></span>
+                                            </a>
+                                            
+                                        </div>
                                     </div>
                                     
                                 </div>
@@ -172,26 +178,29 @@
 
                 <div class="col-12 col-lg-5">
                     <div class="contact lawyer__card">
-                        <form action="" class="cmnForm" name="form">
+                        <form novalidate action="" class="cmnForm" name="form">
                             <div class="nHead">
                                 <h2 class="nHead__title">
                                     طلب استشارة
                                 </h2>
                             </div>
+                            <div class="formErr">
+                                <p></p>
+                              </div>
                             <label for="name">الاسم بالكامل* :</label>
-                            <input type="text" name="" id="name" required autocomplete="name">
+                            <input type="text" data-required="required" name="usernm" id="name"  autocomplete="name">
                             <!--  -->
-                            <label for="email">البريد الالكتروني :</label>
-                            <input type="email" name="" id="email" autocomplete="email">
+                            <label for="email">البريد الالكتروني* :</label>
+                            <input type="email" data-required="required" name="useremail" id="email" autocomplete="email">
                             <!--  -->
                             <label for="phone">رقم الهاتف* :</label>
-                            <input type="tel" name="" id="" autocomplete="tel" required>
+                            <input type="tel" data-required="required" name="userphone" id="" autocomplete="tel" >
                             <!--  -->
                             <label for="title">الموضوع* :</label>
-                            <input type="text" name="" id="title" required>
+                            <input type="text" data-required="required" name="usersubject" id="title" >
                             <!--  -->
                             <label for="msg">التفاصيل* :</label>
-                            <textarea name="" id="msg" cols="30" rows="4"></textarea>
+                            <textarea name="textmsg" class="textareaeditor" data-required="required" id="msg" cols="30" rows="4"></textarea>
                             <!--  -->
                             <input type="file" name="file" id="file" multiple>
                             <label for="file" class="cmnForm__file">
@@ -243,6 +252,28 @@
 
     <!-- JS -->
     <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <!-- html textarea editor -->
+    <script src="../js/ckeditor.js"></script>
+
+    <script>
+      ClassicEditor
+    .create( document.querySelector( '.textareaeditor' ), {
+        language: {
+            // The UI will be English.
+            ui: 'ar',
+
+            // But the content will be edited in Arabic.
+            content: 'ar'
+        }
+    } )
+    .then( editor => {
+        window.editor = editor;
+    } )
+    .catch( err => {
+        console.error( err.stack );
+    } );
+    </script>
 
     <script src="../js/common.js"></script>
 </body>

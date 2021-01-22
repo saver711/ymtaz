@@ -3,7 +3,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px;
-  background-color: #566246;
+  background-color: #ad592d;
   color: #fff;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -39,7 +39,7 @@
 }
 
 .slides .slide.active, .slides .slide:hover {
-  background-color: #566246;
+  background-color: #ad592d;
   color: #fff;
 }
 
@@ -49,6 +49,7 @@
           flex: 1;
   line-height: 1.55;
   font-size: 1.4rem;
+  margin-left: 2px;
 }
 
 .slides .slide span {
@@ -183,7 +184,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 10px;
-  background-color: #566246;
+  background-color: #ad592d;
   color: #fff;
 }
 
@@ -237,7 +238,6 @@
 .open-book header *,
 .open-book footer * {
   font: 700 1em/1.25 "Playfair Display", sans-serif;
-  letter-spacing: 0.125em;
   margin: 0;
 }
 
@@ -324,7 +324,7 @@
     position: relative;
   }
   .open-book:before {
-    background-color: #566246;
+    background-color: #ad592d;
     border-radius: 0.25em;
     bottom: -1em;
     content: "";
@@ -451,11 +451,11 @@
   display: flex;
   padding: 10px 20px;
   width: 90%;
-  background-color: #566246;
+  background-color: #ad592d;
   margin: 25px auto 0;
   color: #fff;
-  -webkit-box-shadow: 0 3px 20px #566246;
-          box-shadow: 0 3px 20px #566246;
+  -webkit-box-shadow: 0 3px 20px #ad592d;
+          box-shadow: 0 3px 20px #ad592d;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -467,8 +467,8 @@
 }
 
 .book .download:hover {
-  -webkit-box-shadow: 0 -3px 10px #566246;
-          box-shadow: 0 -3px 10px #566246;
+  -webkit-box-shadow: 0 -3px 10px #ad592d;
+          box-shadow: 0 -3px 10px #ad592d;
 }
 
 .book .download span.flat-icon {

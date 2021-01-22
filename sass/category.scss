@@ -1,0 +1,106 @@
+/* VARIABLES */
+$main-color: #ad592d;
+ 
+$text-color: #777777;
+$shining-color:#cd3434;
+
+$white-color: #fff;
+$light-color:#d8dad3;
+$lighter-color: #f1f1f1;
+
+$dark-color:#4a4a48;
+
+
+
+
+
+.container > .row:hover .card-lawyer{
+    filter: blur(20px);
+                transform: scale(.9);
+                opacity: .5;
+}
+
+.container > .row .card-lawyer:hover{
+    filter: blur(0px);
+                transform: scale(1.1);
+                opacity: 1;
+}
+
+.filter-lawyers {
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__head {
+      font-family: "bukra-bold";
+      margin-bottom: 5px;
+      color: $shining-color;
+      text-decoration: underline;
+    }
+  
+
+  
+    &__container {
+      display: flex;
+  
+      &--semi {
+        display: flex;
+  
+        &:not(:last-of-type) {
+          margin-left: 10px;
+        }
+      }
+    }
+  
+    &__column {
+      display: flex;
+font-family: "bukra-bold";
+font-size: 1.3rem;
+
+.fltr-rslt-title{
+    color: $shining-color;
+}
+
+  
+
+      &:not(:last-of-type) {
+        margin-left: 15px;
+      }
+    }
+  
+
+  }
+
+@media (pointer: coarse) {
+    /* custom css for "touch targets" */
+    .container > .row:hover .card-lawyer{
+        filter: blur(0px);
+                    transform: scale(1);
+                    opacity: 1;
+    }
+}
+
+@media (hover: none), (hover: on-demand) {
+    /* custom css for "touch targets" */
+    .container > .row:hover .card-lawyer{
+        filter: blur(0px);
+                    transform: scale(1);
+                    opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .filter-lawyers {
+      &__container {
+        flex-direction: column;
+  
+        &--semi {
+          &:not(:last-of-type) {
+            margin-left: 0;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }

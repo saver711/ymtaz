@@ -13,6 +13,13 @@
     <!-- mine -->
     <link rel="stylesheet" href="../sass/common.css" />
     <link rel="stylesheet" href="../sass/log.css" />
+
+    <!-- fav icons -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images//icon-32.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/icon-16.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images//icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icon-16.png">
   </head>
   <body>
     <div class="body-content">
@@ -82,7 +89,7 @@
         </div>
         <!-- end navbar -->
         <!-- start signup -->
-        <div class="signup login">
+        <div class="signup login sec-padd">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-md-5">
@@ -97,11 +104,14 @@
     
                     <div class="col-12 col-md-7">
                         <div class="log">
-                            <form action="">
+                            <form action="" novalidate name="loginform">
+                              <div class="formErr">
+                                <p></p>
+                              </div>
                                 <div class="log__row log__row--1">
                                     <div class="log__col">
-                                        <label for="email">البريد الالكتروني</label>
-                                        <input id="email" type="email" autocomplete="email" required>
+                                        <label for="email">البريد الالكتروني*</label>
+                                        <input id="email" type="email" autocomplete="email" data-required="required" name="useremail">
                                     </div>
             
                                 </div>
@@ -109,8 +119,8 @@
                                 <div class="log__row log__row--1">
                 
                                     <div class="log__col">
-                                        <label for="pass">كلمة المرور</label>
-                                        <input id="pass" type="password" required>
+                                        <label for="pass">كلمة المرور*</label>
+                                        <input id="pass" type="password" data-required="required" name="userpass">
                                     </div>
                                 </div>
 
@@ -126,17 +136,24 @@
                                     <input type="submit" value="الدخول">
                                 </div>
                             </form>
-                            <form action="" class="forget-mail">
+                            <form novalidate action="" class="forget-mail"  name="restoreloginform">
+                              <div class="formErr">
+                                <p></p>
+                              </div>
                                 <div class="log__row log__row--1">
                                     <div class="log__col">
-                                        <label for="email-forget">البريد الالكتروني</label>
-                                        <input id="email-forget" type="email" required>
+                                        <label for="email-forget">البريد الالكتروني*</label>
+                                        <input id="email-forget" type="email" data-required="required" name="restoreuseremail">
                                     </div>
                                 </div>
 
                                 <div class="log__row log__row--1">
                                     <input type="submit" value="استرجاع">
                                 </div>
+
+                                <div class="log__row log__row--1">
+                                  <h2 class="forget-mail__msg">تم ارسال رسالة استرجاع لبريدك</h2>
+                              </div>
                             </form>
                             
                         </div>

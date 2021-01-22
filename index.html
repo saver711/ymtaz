@@ -13,6 +13,14 @@
     <!-- mine -->
     <link rel="stylesheet" href="sass/common.css" />
     <link rel="stylesheet" href="sass/home.css" />
+
+    <!-- fav icons -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/images//icon-32.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/images/icon-16.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images//icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icon-16.png">
+    
   </head>
   <body>
     <div class="body-content">
@@ -214,7 +222,7 @@
                 <div class="row">
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -223,7 +231,7 @@
                   </div>
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -232,7 +240,7 @@
                   </div>
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -241,7 +249,7 @@
                   </div>
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -250,7 +258,7 @@
                   </div>
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -259,7 +267,7 @@
                   </div>
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -268,7 +276,7 @@
                   </div>
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -277,7 +285,7 @@
                   </div>
                   <div class="col-12 col-lg-6">
                     <a href="pages/book.html" class="library__item">
-                      <span class="flaticon-pdf flat-icon"></span>
+                      <span class="flaticon-book flat-icon"></span>
 
                       <span class="library__text enhancedText"
                         >نظام مكافحة التدخين</span
@@ -340,42 +348,60 @@
           <section class="contact sec-padd" id="contact">
             <div class="row">
               <div class="col-12 col-md-6">
-                <form action="">
-                  <label for="name">الاسم كامل :</label>
+                <form action="" name="form" novalidate>
+                  <div class="formErr">
+                    <p></p>
+                  </div>
+                  <label for="name">الاسم كامل :*</label>
                   <input
                     type="text"
                     id="name"
+                    data-required="required"
+                    name="usernm"
                     placeholder="اسمك هنا..."
                     autocomplete="name"
                   />
 
-                  <label for="email">البريد الالكتروني :</label>
+                  <label for="email">البريد الالكتروني :*</label>
                   <input
                     type="email"
                     id="email"
                     autocomplete="email"
-                    required
+                    data-required="required"
+                    name="useremail"
                     placeholder="عنوان بريدك هنا..."
                   />
 
-                  <label for="phone">رقم الهاتف :</label>
+                  <label for="phone">رقم الهاتف :*</label>
                   <input
                     type="tel"
                     id="phone"
                     autocomplete="tel"
-                    required
+                    data-required="required"
+                    name="userphone"
                     placeholder="رقم الهاتف..."
                   />
 
-                  <label for="msg">مضمون الرسالة :</label>
-                  <textarea
-                    required
-                    name=""
+                  <label for="subject">الموضوع :</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    placeholder="الموضوع..."
+                    name="usersubject"
+                  />
+
+                  <label for="msg">مضمون الرسالة :*</label>
+                    <textarea
+                    data-required="required"
+                    name="textmsg"
                     id="msg"
+                    class="textareaeditor"
                     cols="30"
-                    rows="10"
+                    rows="30"
                     placeholder="اكتب رسالتك هنا..."
                   ></textarea>
+                  
+                  
 
                   <input type="submit" class="scnd-btn" value="ارسال الرسالة" />
                 </form>
@@ -409,17 +435,12 @@
                       </a>
                     </li>
 
-                    <li class="contact__insta">
+                    <li class="contact__twitt">
                       <a href="#">
-                        <span class="flaticon-instagram flat-icon"></span>
+                        <span class="flaticon-twitter flat-icon"></span>
                       </a>
                     </li>
 
-                    <li class="contact__snap">
-                      <a href="#">
-                        <span class="flaticon-snapchat flat-icon"></span>
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -451,6 +472,27 @@
 
     <!-- JS -->
     <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- html textarea editor -->
+    <script src="js/ckeditor.js"></script>
+
+    <script>
+      ClassicEditor
+    .create( document.querySelector( '.textareaeditor' ), {
+        language: {
+            // The UI will be English.
+            ui: 'ar',
+
+            // But the content will be edited in Arabic.
+            content: 'ar'
+        }
+    } )
+    .then( editor => {
+        window.editor = editor;
+    } )
+    .catch( err => {
+        console.error( err.stack );
+    } );
+    </script>
 
     <script src="js/common.js"></script>
   </body>

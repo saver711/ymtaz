@@ -12,6 +12,13 @@
 
     <!-- mine -->
     <link rel="stylesheet" href="../sass/common.css" />
+
+    <!-- fav icons -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/images//icon-32.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/images/icon-16.ico">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images//icon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icon-16.png">
   </head>
 
   <body>
@@ -83,30 +90,33 @@
         <!-- start lawyer-consult -->
         <div class="lawyer-consult">
           <div class="container">
-            <form action="" class="cmnForm" name="form">
+            <form novalidate action="" class="cmnForm" name="form">
               <div class="nHead">
                 <h2 class="nHead__title">انشاء لجنة</h2>
               </div>
+              <div class="formErr">
+                <p></p>
+              </div>
               <label for="name">الاسم بالكامل* :</label>
-              <input
+              <input data-required="required"
                 type="text"
-                name=""
+                name="usernm"
                 id="name"
-                required
+                
                 autocomplete="name"
               />
               <!--  -->
               <label for="email">البريد الالكتروني :</label>
-              <input type="email" name="" id="email" autocomplete="email" />
+              <input  type="email" name="useremail" id="email" autocomplete="email"/>
               <!--  -->
               <label for="phone">رقم الهاتف* :</label>
-              <input type="tel" name="" id="" autocomplete="tel" required />
+              <input data-required="required" type="tel" name="userphone" id="" autocomplete="tel" />
               <!--  -->
               <label for="title">الموضوع* :</label>
-              <input type="text" name="" id="title" required />
+              <input type="text" data-required="required" name="usersubject" id="title" />
               <!--  -->
               <label for="msg">التفاصيل* :</label>
-              <textarea name="" id="msg" cols="30" rows="10"></textarea>
+              <textarea data-required="required" class="textareaeditor" name="textmsg" id="usermsg" cols="30" rows="10"></textarea>
               <!--  -->
               <input type="file" name="file" id="file" multiple />
               <label for="file" class="cmnForm__file">
@@ -145,6 +155,29 @@
     <!-- JS -->
     <script src="../js/jquery-3.5.1.min.js"></script>
 
+    <!-- html textarea editor -->
+    <script src="../js/ckeditor.js"></script>
+
+    <script>
+      ClassicEditor
+    .create( document.querySelector( '.textareaeditor' ), {
+        language: {
+            // The UI will be English.
+            ui: 'ar',
+
+            // But the content will be edited in Arabic.
+            content: 'ar'
+        }
+    } )
+    .then( editor => {
+        window.editor = editor;
+    } )
+    .catch( err => {
+        console.error( err.stack );
+    } );
+    </script>
+
     <script src="../js/common.js"></script>
+
   </body>
 </html>

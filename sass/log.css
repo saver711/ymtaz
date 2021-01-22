@@ -1,10 +1,10 @@
 .log {
   width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 15px;
   background-color: #f4f4f4;
-  -webkit-box-shadow: 0 4px 10px #566246;
-          box-shadow: 0 4px 10px #566246;
+  -webkit-box-shadow: 0 4px 10px #ad592d;
+          box-shadow: 0 4px 10px #ad592d;
 }
 
 .log__row {
@@ -90,18 +90,31 @@
 
 .log .commitment {
   margin-bottom: 5px;
-}
-
-.log .commitment q {
+  cursor: pointer;
   font-size: 1.3rem;
   line-height: 1.47;
   text-decoration: underline;
   font-family: "bukra-bold";
 }
 
+.log .commitmentList {
+  list-style: circle;
+  padding-right: 20px;
+  margin-bottom: 7px;
+  display: none;
+}
+
+.log .commitmentList__item {
+  font-size: 1.3rem;
+}
+
+.log .commitmentList__item:not(:last-of-type) {
+  margin-bottom: 4px;
+}
+
 .log input[type="submit"] {
   width: 100%;
-  background-color: #566246;
+  background-color: #ad592d;
   font-family: "bukra-bold";
 }
 
@@ -109,32 +122,80 @@
   cursor: pointer;
   font-family: "bukra-bold";
   font-size: 1.1rem;
-  color: #cd5334;
+  color: #cd3434;
 }
 
 .log .forget-mail {
   display: none;
 }
 
+.log .forget-mail__msg {
+  width: 100%;
+  text-align: center;
+  color: #cd3434;
+}
+
 .signup__show {
   height: 100%;
-  padding: 15px 15px 0;
   -webkit-box-shadow: -3px 0 10px #ccc;
           box-shadow: -3px 0 10px #ccc;
 }
 
 .signup__logo {
   margin: 0 auto 0;
-  width: 55%;
+  width: 43%;
 }
 
 .signup__title {
   font-size: 2.5rem;
   border-bottom: 2px solid;
   margin-bottom: 20px;
-  background-color: #566246;
+  background-color: #ad592d;
   color: #fff;
   padding: 5px 15px 5px 0;
+}
+
+.login .signup__show {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*login-phone*/
+.login-phone button:focus,
+.login-phone input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px #ad592d;
+          box-shadow: 0 0 5px #ad592d;
+}
+
+.login-phone .otp-form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  direction: ltr;
+}
+
+.login-phone .otp-inputbar {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.login-phone #errmsg {
+  font-family: "bukra-bold";
+  font-size: 1.4rem;
+  text-align: center;
+  color: red;
 }
 
 @media only screen and (max-width: 991px) {
@@ -157,10 +218,5 @@
   .signup__logo {
     width: 28%;
   }
-}
-
-.login .signup__show {
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 /*# sourceMappingURL=log.css.map */
